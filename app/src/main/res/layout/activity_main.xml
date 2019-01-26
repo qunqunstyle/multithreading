@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_camera_activity"
+    tools:context="com.example.qunqun.multithreading.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/half_red">
+
+        <RadioGroup
+            android:id="@+id/main_top_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/top_rg_a"
+                android:layout_width="56dp"
+                android:layout_height="29dp"
+                android:background="@drawable/top_r_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="面部"
+                android:textColor="@drawable/top_r_text"
+                android:textColorHighlight="@color/half_red"
+                android:textSize="15dp" />
+
+            <RadioButton
+                android:id="@+id/top_rg_b"
+                android:layout_width="56dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="-1dp"
+                android:background="@drawable/top_r_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="手指"
+                android:textColor="@drawable/top_r_text"
+                android:textColorHighlight="@color/half_red"
+                android:textSize="15dp" />
+        </RadioGroup>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/text2"
+        android:layout_marginTop="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TextView
+            android:id="@+id/mark"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="请将脸部放置在圆形区域中，并尽量保持不动"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+
+    </LinearLayout>
+    <com.example.qunqun.multithreading.MySurfaceView
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="-30dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/camera_mysurfaceview"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/circle"/>
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="55dp"
+        android:focusable="true"
+        android:textColor="#FF2D2D"
+        android:textSize="8pt" />
+    <com.example.qunqun.multithreading.CameraProgressBar
+        android:layout_marginTop="90dp"
+        android:id="@+id/camera_ProgressBar"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/text1"
+        android:layout_marginTop="340dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TextView
+            android:id="@+id/Prompt"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="点击圆框录制视频"
+            android:textColor="#fff"
+            android:textSize="30dp" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/point_out"
+        android:layout_marginTop="390dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        />
+
+
+
+    <Button
+        android:id="@+id/buttonPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_nor_down"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:text="点击按钮调用 onpreviewframe"
+        android:textSize="15dp" />
+
+
+</RelativeLayout>

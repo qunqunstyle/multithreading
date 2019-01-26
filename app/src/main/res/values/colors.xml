@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFF</color>
+    <color name="color_48baf3">#48BAF3</color>
+    <color name="md_white_1000">#ffffff</color>
+    <color name="half_red">#9000</color> <!--!设置透明度-->
+</resources>

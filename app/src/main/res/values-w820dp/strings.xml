@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HeartRateDect</string>
+
+    <string name="permission_camera_rationale">应用需要得到相机权限才能显示进行心率检测！！！</string>
+    <string name="permission_storage_rationale">应用需要获得读写SD卡权限才能进行心率检测！！！</string>
+    <string name="permission_camera_denied">请求相机权限被拒绝。 如果要访问相机，则必须授予该权限。</string>
+    <string name="permission_camera_never_askagain">请求相机权限被拒绝，并不再询问。</string>
+</resources>
