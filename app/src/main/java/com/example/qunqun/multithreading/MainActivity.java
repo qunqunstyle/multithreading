@@ -76,6 +76,7 @@ public class MainActivity extends Activity implements Camera.PreviewCallback {
     int fs;
     float fr;
     int duration;
+    byte[] mPreBuffer = new byte[400];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -259,6 +260,7 @@ public class MainActivity extends Activity implements Camera.PreviewCallback {
                         mediaRecorder = null;
                         FormatUtil.videoRename(mRecAudioFile);
                         Log.e(TAG_CAMERA_ACTIVITY, "=====录制完成，已保存=====");
+                        surfaceView.setClickable(true);
                         Prompt.setText("录制完成");
                         isRecording = !isRecording;
                         mProgressbar.reset();
@@ -291,6 +293,7 @@ public class MainActivity extends Activity implements Camera.PreviewCallback {
             parameters.setPreviewFrameRate(30);
             camera.setParameters(parameters);
             camera.setDisplayOrientation(90);
+            camera.addCallbackBuffer(mPreBuffer);
             camera.setPreviewDisplay(cameraSurfaceHolder);
             camera.startPreview();
         } catch (IOException e) {
